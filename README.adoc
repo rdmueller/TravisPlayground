@@ -1,0 +1,3 @@
+== TravisPlayground
+
+this is just a small playground to get used to Travis CI and the github integration.
