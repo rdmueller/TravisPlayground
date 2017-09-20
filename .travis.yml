@@ -12,7 +12,11 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-script:
-- ./gradlew tasks
-- ./gradlew
-- ./gradlew test
+jobs:
+  include:
+    - stage: dependencies
+      script: ./gradlew tasks
+    - stage: default tasks
+      script: ./gradlew
+    - stage: test
+      script: ./gradlew test
